@@ -197,8 +197,9 @@ function step4() {
 
 function step() {
   final = true;
-  page6 = false;
   window.location.replace(urlVal);
+  page6 = false;
+  background(0,0,0);
 }
 
 function internetFin(urlVal) {
@@ -262,5 +263,6 @@ function step8(){
   page6 = false;
   url = createInput('http://www.');
   url.position(document.body.clientWidth/3,350);
+  background(0,0,0);
 }
 
