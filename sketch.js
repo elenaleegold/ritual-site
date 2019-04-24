@@ -197,6 +197,7 @@ function step4() {
 
 function step() {
   final = true;
+  page6 = false;
   window.location.replace(urlVal);
 }
 
