@@ -17,7 +17,7 @@ function setup() {
   page3 = false;
   touchSize = 100;
   touchSize2 = 15;
-  touchSize3 = 100;
+  touchSize3 = 40;
   touchSize4 = 70;
   dir = 1;
   dir2 = 1;
@@ -93,21 +93,21 @@ function draw(){
 
     //top left
     if(mouseIsPressed && mouseX > 0 && mouseX < document.body.clientWidth/2 && mouseY > 0 && mouseY < document.body.clientHeight/2){
-        if(pressed == true){
-          pressed = false;
-        }
-        else{
+        if(pressed == false){
           pressed = true;
         }
+        // else{
+        //   pressed = true;
+        // }
       }
     //bottom left
       if(mouseIsPressed && mouseX > 0 && mouseX < document.body.clientWidth/2 && mouseY > document.body.clientHeight/2 && mouseY < document.body.clientHeight){
         if(pressed2 == false){
           pressed2 = true;
         }
-        else{
-          pressed2 = false;
-        }
+        // else{
+        //   pressed2 = false;
+        // }
       }
 
     //top right
@@ -115,19 +115,24 @@ function draw(){
         if(pressed3 == false){
           pressed3 = true;
         }
-        else{
-          pressed3 = false;
-        }
+        // else{
+        //   pressed3 = false;
+        // }
       }
     //bottom left
       if(mouseIsPressed && mouseX > document.body.clientWidth/2 && mouseX < document.body.clientWidth && mouseY > document.body.clientHeight/2 && mouseY < document.body.clientHeight){
         if(pressed4 == false){
           pressed4 = true;
         }
-        else{
-          pressed4 = false;
-        }
+        // else{
+        //   pressed4 = false;
+        // }
       }
+
+      if(pressed == true && pressed2 == true && pressed3 == true && pressed4 == true){
+         $("#button1").css("display", "inline");
+      }
+
     }
 
     if(page3 == true){
