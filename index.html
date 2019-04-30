@@ -11,7 +11,7 @@
 	<p> You are trying to access the internet but you are <i><b>Logged Off</b>.</p><br></i>
 	<p> Would you like to <b><i>Log On</b>?</p></i>
 	<button class="button" onclick="step2()"><b>Yes</b></button>
-	<button class="button" ><b>No </b></button>
+	<button class="button" onclick="window.close()"><b>No </b></button>
 	<img src="assets/char.png">
 
 </div>
@@ -23,15 +23,15 @@
 <div id="page3">
 	<img src="assets/loading2.gif">
 	<h1> This is a loading icon </h1>
-	<p> Everytime you see this icon take a moment to connect with the physical world.</p>
-	<center><button class="button" onclick="step4()"><b> Ok</b></button></center>
+	<p> Every time you see this loading icon, image that it's prompting you to take several deep breaths.</p>
+	<center><button class="button" onclick="step4()"><b> Continue</b></button></center>
 	<center><button class="button" id="specialButton" onclick="step5()"><b> Let's move on</b></button></center>
 
 </div>
 
 <div id="page4">
-	<h1> Type a word or phrase below </h1>
-	<p> Once you've typed in a word or phrase, say it or whisper it to yourself.</p><br><br>
+	<h1> Type a word or phrase below</h1>
+	<p> This word will serve as your escape from your time on the Internet. The word can be meaningful or entirely meaningless. It's up to you.</p><br><br>
 	<center><button class="button" id="specialSubmit" onclick="greet()"><b> Submit</b></button></center>
 </div>
 

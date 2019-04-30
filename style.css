@@ -217,6 +217,15 @@ input[type=text] {
 	display: none;
 }
 
+@keyframes fade {
+    0% {
+        transform: opacity(0);
+    }
+    100% {
+        transform: opacity(100);
+    }
+}
+
 .button:hover {
   background-color: #d04747;
   border: 5px solid #8a7ec3;

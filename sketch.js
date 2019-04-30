@@ -130,7 +130,9 @@ function draw(){
       }
 
       if(pressed == true && pressed2 == true && pressed3 == true && pressed4 == true){
-         $("#button1").css("display", "inline");
+         // $("#button1").css("display", "inline");
+         $("#button1").delay( 200 ).fadeIn( 400 );
+
       }
 
     }
@@ -145,7 +147,7 @@ function draw(){
     }
 
     if(greet == true){
-        const name = input.value() ;
+        const name = input.value();
         // print("here");
         // for (let i = 0; i < 200; i++) {
         // push();
@@ -192,10 +194,12 @@ function step3() {
 }
 
 function step4() {
-      $("#page3 h1").text('Lets practice');
-      $("#page3 p").text('Close your eyes and pay attention to the sounds around you for 10 seconds.');
+      $("#page3 h1").text('Let\'s practice');
+      $("#page3 p").text('Breathe deeply while paying close attention to the sounds around you. Feel free to take off your headphones for this portion.');
       $("#page3 button").css("display", "none");
-      $("#specialButton").css("display", "inline");
+      $("#specialButton").slideUp( 300 ).delay( 20000 ).fadeIn( 400 );
+      // $("#specialButton").css("display", "inline");
+      $('#page3 img').attr('src','assets/loading_transform.gif');
 }
 
 /// ritual becomes more nonsensical as you move on
@@ -221,6 +225,7 @@ function step5(){
 
   input = createInput();
   input.position(document.body.clientWidth/4,300);
+  input.id('TheInput');
 
   // input2 = createInput();
   // input2.position(document.body.clientWidth/2.5,450);
