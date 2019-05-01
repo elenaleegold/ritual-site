@@ -149,9 +149,9 @@ function draw(){
     if(greet == true){
         url = window.location.href;
         const name = input.value();
-        $.post(url,name,function(data,status){
-          console.log(`${data} and status is ${status}`)
-        });
+        // $.post(url,name,function(data,status){
+        //   console.log(`${data} and status is ${status}`)
+        // });
 
         // print("here");
         // for (let i = 0; i < 200; i++) {
@@ -227,7 +227,7 @@ function greet() {
 function step5(){
   $("#page3").css("display", "none");
   $("#page4").css("display", "inline");
-
+   $("#TheInput").css("display", "inline");
   input = select('#TheInput');
   // input.position(document.body.clientWidth/4,300);
   // input.id('TheInput');
