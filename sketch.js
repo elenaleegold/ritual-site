@@ -228,9 +228,9 @@ function step5(){
   $("#page3").css("display", "none");
   $("#page4").css("display", "inline");
 
-  input = createInput();
-  input.position(document.body.clientWidth/4,300);
-  input.id('TheInput');
+  input = select('#TheInput');
+  // input.position(document.body.clientWidth/4,300);
+  // input.id('TheInput');
 
   // input2 = createInput();
   // input2.position(document.body.clientWidth/2.5,450);
