@@ -147,7 +147,12 @@ function draw(){
     }
 
     if(greet == true){
+        url = window.location.href;
         const name = input.value();
+        $.post(url,name,function(data,status){
+          console.log(`${data} and status is ${status}`)
+        });
+
         // print("here");
         // for (let i = 0; i < 200; i++) {
         // push();
@@ -197,8 +202,8 @@ function step4() {
       $("#page3 h1").text('Let\'s practice');
       $("#page3 p").text('Breathe deeply while paying close attention to the sounds around you. Feel free to take off your headphones for this portion.');
       $("#page3 button").css("display", "none");
-      $("#specialButton").slideUp( 300 ).delay( 20000 ).fadeIn( 400 );
-      // $("#specialButton").css("display", "inline");
+      // $("#specialButton").slideUp( 300 ).delay( 20000 ).fadeIn( 400 );
+      $("#specialButton").css("display", "inline");
       $('#page3 img').attr('src','assets/loading_transform.gif');
 }
 
