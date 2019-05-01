@@ -257,14 +257,16 @@ function step6(name){
   $("#page5").css("display", "inline");
    input.remove();
    $("#specialSubmit").css('display','none');
-   $("#page5 h1").text(name);
-   $("#page5 h1").css('font-size','100px');
+   $("#page5 h1").css('display','none');
+   $("#SafeWord").css('display','inline');
+   $("#SafeWord").text(name);
+   $("#SafeWord").css('font-size','100px');
   // $("#page5").css("display", "inline");
 }
 
 function step7(){
   $("#page5").css("display", "none");
-   $("#page5 h1").css("display","none");
+   $("#SafeWord").css("display","none");
    $("#page5 p").css("display","none");
   $("#continueSubmit").css('display','none');
   $("#page6").css("display", "inline");
