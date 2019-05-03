@@ -182,7 +182,11 @@ function draw(){
       page2 = false;
       page3 = false;
       page5 = false;
-      image(capture, 100, 300, 550, 390);
+      noFill();
+      stroke(255);
+      strokeWeight(5);
+      rect(50,200,windowWidth-200, windowHeight-300)
+      image(capture, windowWidth/3.2, 300, 500, 340);
       $("#page5 h1").css("display","none");
       if(mouseIsPressed){
         fill(255);
@@ -194,8 +198,8 @@ function draw(){
 
     if(page4 == true){
       if(mouseIsPressed == true){
-        // $("#specialButton").delay( 20000 ).fadeIn( 400 );
-        $("#specialButton").fadeIn();
+        $("#specialButton").delay( 20000 ).fadeIn( 400 );
+        // $("#specialButton").fadeIn();
         $("#page3 img").css("opacity","0");
         stroke(255,168,168);
         strokeWeight(10);
@@ -209,7 +213,7 @@ function draw(){
           textSize(30);
           textFont('Space Mono');
           textAlign(CENTER);
-          text('Breathe Out',mouseX, mouseY+200);
+          text('Breathe Out',mouseX, mouseY - 200);
         }
         else{
           circDiam+=0.5;
@@ -219,17 +223,17 @@ function draw(){
             textAlign(CENTER);
             textFont('Space Mono');
             textSize(30);
-            text('Breathe in',mouseX, mouseY+200);
+            text('Breathe in',mouseX, mouseY - 200);
             }
         }
-        if(circDiam > 350 || circDiam < 0){
+        if(circDiam > 300 || circDiam < 0){
            circDir = circDir * -1;
         }
         if(circDiam < 0){
           circDiam = 0;
         }
         else if (circDiam > 350){
-          circDiam = 350;
+          circDiam = 300;
         }
         if(circDiam > 150 && circDir == 1){
           noStroke();
@@ -237,7 +241,7 @@ function draw(){
           textAlign(CENTER);
           textSize(30);
           textFont('Space Mono');
-          text('Hold breath',mouseX, mouseY+200);
+          text('Hold breath',mouseX, mouseY - 200);
         }
       }
       else{
@@ -270,7 +274,7 @@ function step3() {
 
 function step4() {
       $("#page3 h1").text('Let\'s practice');
-      $("#page3 p").text('Try to imagine the loading icon is instead prompting you to begin a breathing exercise. Tap and hold to start the exercise. Breathe in for 4 seconds, hold for 7 seconds, out for 8 seconds.');
+      $("#page3 p").text('Think of the loading icon as an opportunity to breathe.\nTap and hold to start the exercise. Breathe in for 4 seconds, hold for 7 seconds, out for 8 seconds.');
       $("#page3 button").fadeOut(1000);
       // $("#specialButton").css("display", "inline");
       $('#page3 img').attr('src','assets/loading_transform.gif');
