@@ -171,10 +171,12 @@ function draw(){
       page2 = false;
       page3 = false;
       page5 = false;
+      $("#page5 h1").css("display","none");
       if(mouseIsPressed){
         fill(255);
-        noStroke();
-        ellipse(mouseX,mouseY,10);
+        stroke(255);
+        strokeWeight(3);
+        line(mouseX, mouseY, pmouseX, pmouseY);
       }
     }
 
@@ -216,6 +218,18 @@ function step() {
   background(0,0,0);
 }
 
+function saveStep(){
+  save(month() + "-" + day() + "-" + year() + "-" + hour() + "-" + minute() + ".jpg");
+  $("#saveButton").css("display", "none");
+  $("#toFinal").css("display", "inline");
+  $("#page6 h1").text('Hit continue to submit.');
+  $("#page6 p").css('display','none');
+}
+function toFinal(){
+   window.location.href = 'final.html';
+}
+
+
 function internetFin(urlVal) {
   window.location.replace(urlVal);
 }
@@ -252,12 +266,17 @@ function step5(){
 
 }
 
+function moveOn(){
+   $("#page6").css("display", "none");
+   $("#page65").css("display", "inline");
+}
+
+
 function step6(name){
   $("#page4").css("display", "none");
   $("#page5").css("display", "inline");
    input.remove();
    $("#specialSubmit").css('display','none');
-   $("#page5 h1").css('display','none');
    $("#SafeWord").css('display','inline');
    $("#SafeWord").text(name);
    $("#SafeWord").css('font-size','100px');
@@ -265,13 +284,13 @@ function step6(name){
 }
 
 function step7(){
-  $("#page5").css("display", "none");
+   $("#page5").css("display", "none");
    $("#SafeWord").css("display","none");
    $("#page5 p").css("display","none");
-  $("#continueSubmit").css('display','none');
-  $("#page6").css("display", "inline");
+   $("#SafeWord").css("display","none");
+   $("#continueSubmit").css('display','none');
+   $("#page6").css("display", "inline");
   page6 = true;
-
 }
 
 function step8(){
@@ -282,4 +301,5 @@ function step8(){
   url.position(document.body.clientWidth/3,350);
   background(0,0,0);
 }
+
 

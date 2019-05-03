@@ -32,7 +32,7 @@ function setup() {
     createCanvas(windowWidth - windowWidth * 0.05, windowHeight - windowHeight * 0.1);
     windowCount = 0;
 
-    for (var i = 2; i < 3; i++) {
+    for (var i = 2; i < 20; i++) {
         var div = document.getElementById('window1');
         var acDiv = document.getElementById('afterCare1');
         clone = div.cloneNode(true); // true means clone all childNodes and all event handlers
@@ -40,7 +40,7 @@ function setup() {
         acDiv.appendChild(clone);
         var newDiv = document.getElementById(clone.id);
         var posx = random(-1000, 300);
-        var posy = random(300);
+        var posy = random(350);
         var s = select(clone.id);
         select('#window' + i).style('margin-top', posy + 'px');
         select('#window' + i).style('margin-left', posx + 'px');
@@ -76,8 +76,8 @@ function draw() {
         $('#afterCare1').fadeOut(1000);
         $('#afterCare2').fadeIn(1500);
         afterCare2 = true;
-        // $("#afterCare2Btn").delay( 20000 ).fadeIn( 400 );
-        $("#afterCare2Btn").fadeIn(400);
+        $("#afterCare2Btn").delay( 20000 ).fadeIn( 400 );
+        // $("#afterCare2Btn").fadeIn(400);
 
     }
 
