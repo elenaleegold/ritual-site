@@ -8,32 +8,33 @@
 <body>
 <div id="page1">
 	<h1> Warning</h1> 
-	<p> You are trying to access the internet but you are <i><b>Logged Off</b>.</p><br></i>
+	<p> You are trying to access the internet but you are <i><b>Logged Off</b>.</p><br><br><br></i>
 	<p> Would you like to <b><i>Log On</b>?</p></i>
-	<button class="button" onclick="step2()"><b>Yes</b></button>
-	<button class="button" onclick="window.close()"><b>No </b></button>
+	<br><br><button class="button" onclick="step2()"><b>Yes</b></button>
+	<button class="button" id="noButton" onclick="close()" ><b>No</b></button>
 	<img src="assets/char.png">
 
 </div>
 <div id="page2">
 	<h1> Touch all four corners of your screen</h1>
-	<p> Internalize the physical boundaries of your virtual world.</p>
-	<center><button class="button" id="button1" onclick="step3()"><b> I'm done</b></button></center>
+	<p> During your time on the internet, it is easy for the virtual and physical realms to start to blur. Practice highlighting their boundaries by tracing them with your finger.</p><br><br>
+	<center><button class="button" id="button1" onclick="step3()"><b>Let's continue</b></button></center>
 </div>
 <div id="page3">
 	<img src="assets/loading2.gif">
 	<h1> This is a loading icon </h1>
-	<p> Every time you see this loading icon, image that it's prompting you to take several deep breaths.</p>
-	<center><button class="button" onclick="step4()"><b> Continue</b></button></center>
+	<p> Loading icons traditionally inspire agitation and impatience. Try to notice if the loading icon conjures any of those feelings for you.</p><b><br><br>
+	<center><button class="button" onclick="step4()"> Ok</b></button></center>
 	<center><button class="button" id="specialButton" onclick="step5()"><b> Let's move on</b></button></center>
 
 </div>
 
 <div id="page4">
+	<img src="assets/char_anim_small.gif">
 	<h1> Type a word or phrase below</h1>
-	<p> This word will serve as your escape from your time on the Internet. The word can be meaningful or entirely meaningless. It's up to you.</p><br><br>
-	<input type="text" id="TheInput" name="name" size="20">
-	<center><button class="button" id="specialSubmit" onclick="greet()"><b> Submit</b></button></center>
+	<p> This word will serve as your escape from your time on the Internet. The word can be meaningful or entirely meaningless. When you're browsing the internet, interact with the creature above and you'll be able to enter your word and exit.</p><br><br>
+	<input type="text" id="TheInput" name="name" size="20"><br><br>
+	<center><button class="button" onclick="greet()"><b>Submit</b></button></center>
 </div>
 
 <div id="page5">
@@ -43,9 +44,9 @@
 </div>
 
 <div id="page6">
-	<h1>Take in your physical surroundings</h1>
-	<p> Click and drag to draw what you see around you.</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-	<center><button class="button" id="continueSubmit" onclick="moveOn()"><b> Move On</b></button></center></div>
+	<h1>Click and drag to draw what you see around you</h1>
+	<p> When you're done notice how your drawing is an abstraction of the image on the right, if anything. Pay attention to how even video to the left doesn't quite represent what it feels like to exist in the reality you see in front ot of you. </p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<center><button class="button" id="continueSubmit" onclick="toFinal()"><b> Continue</b></button></center></div>
 
 	<div id="page65">
 	<h1>Let's memorialize this moment</h1>

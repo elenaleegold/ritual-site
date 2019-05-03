@@ -19,6 +19,7 @@ h1{
 p{
 	font-size: 30px;
 	color:  #d04747;
+	margin: 0 10%;
 }
 
 #page1 img
@@ -26,6 +27,10 @@ p{
   width: 25%;
   height: auto;
   float: right;
+}
+
+#page1 p{
+	margin: auto 0;
 }
 
 #page2{
@@ -73,6 +78,7 @@ p{
 	font-size: 18px;
 	text-align: center;
 	color:  #d04747;
+	margin: 0 10%;
 }
 
 #page3 img
@@ -103,6 +109,7 @@ p{
 	font-size: 18px;
 	text-align: center;
 	color:  #d04747;
+	margin: 0 10%;
 }
 
 
@@ -127,6 +134,7 @@ p{
 	font-size: 18px;
 	text-align: center;
 	color:  #d04747;
+	margin: 0 10%;
 }
 
 #page6{
@@ -151,6 +159,7 @@ p{
 	font-size: 18px;
 	text-align: center;
 	color:  #d04747;
+	margin: 0 10%;
 }
 
 #page65{
@@ -175,6 +184,7 @@ p{
 	font-size: 18px;
 	text-align: center;
 	color:  #d04747;
+	margin: 0 10%;
 }
 
 
@@ -200,6 +210,7 @@ p{
 	font-size: 18px;
 	text-align: center;
 	color:  #d04747;
+	margin: 0 10%;
 }
 
 #afterCare1{
@@ -312,7 +323,7 @@ p{
 
 #afterCare4Btn{
 	display: none;
-	margin-top: 25%;
+	margin-top: 40%;
 }
 
 
@@ -346,8 +357,18 @@ input[type=text] {
 }
 
 #page4 button{
-	width: 100px;
-	height: 50px;
+	/*width: 100px;
+	height: 50px;*/
+}
+
+#noButton{
+	display: inline;
+}
+
+#noButton:hover {
+	background:black;
+	border: black;
+	color:black;
 }
 
 .button {

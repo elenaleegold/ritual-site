@@ -158,6 +158,7 @@ function afterCare4(){
     afterCare4 = true;
     $('#afterCare3').fadeOut(1000);
     $('#afterCare4').fadeIn(1500);
+    $('#afterCare4Btn').delay( 20000 ).fadeIn(3000);
     background(0,0,0);
 }
 
@@ -167,3 +168,7 @@ function mousePressed() {
 function mouseDragged() {}
 
 function mouseReleased() {}
+
+function toFinal(){
+   window.location.href = 'reset.html';
+}
